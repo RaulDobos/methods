@@ -10,35 +10,34 @@ public class App
 {
     public static void main( String[] args )
     {
-        double a, b, res;
+        int a, b;
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Insert a value for a: ");
-        a = scanner.nextDouble();
+        System.out.println("Insert an integer value for a: ");
+        a = scanner.nextInt();
 
-        System.out.println("Insert a value for b: ");
-        b = scanner.nextDouble();
+        System.out.println("Insert an integer value for b: ");
+        b = scanner.nextInt();
 
         Operations operations = new Operations();
 
-        res = operations.add(a, b);
-        System.out.println("a + b result is: " + res);
+        System.out.println("a + b = " + operations.add(a, b));
+        System.out.println("a - b = "+ operations.subtract(a, b));
+        System.out.println("a * b = " + operations.multiply(a, b));
+        System.out.println("a / b = " + operations.divide(a, b) + "\n");
 
-        res = operations.subtract(a, b);
-        System.out.println("a - b result is: " + res);
+        System.out.println("Insert an integer/floating point value for c:");
 
-        res = operations.subtract(b, a);
-        System.out.println("b - a result is: " + res);
+        double c = scanner.nextDouble();
 
-        res = operations.multiply(a, b);
-        System.out.println("a * b result is: " + res);
+        System.out.println("Insert an integer/floating point value for b:");
 
-        res = operations.divide(a, b);
-        System.out.println("a / b result is: " + res);
+        double d = scanner.nextDouble();
 
-        res = operations.divide(b, a);
-        System.out.println("b / a result is: " + res);
-
+        System.out.println("c + d = " + operations.add(c, d));
+        System.out.println("c - d = "+ operations.subtract(c, d));
+        System.out.println("c * d = " + operations.multiply(c, d));
+        System.out.println("c / d = " + operations.divide(c, d));
     }
 }
